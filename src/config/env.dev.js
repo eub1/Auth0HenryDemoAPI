@@ -31,7 +31,7 @@ if (!clientOriginUrl) {
   );
 }
 
-const clientOrigins = ["http://localhost:4040"];
+const clientOrigins = ["http://localhost:4040", 'https://portfolio-front-pearl.vercel.app'];
 
 module.exports = {
   audience,
