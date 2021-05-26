@@ -26,9 +26,11 @@
  recruiterRouter.get("/protected-recruitment", checkJwt, (req, res) => {
   try{
     const message = getProtectedRecruitment();
-     res.status(200).send(message);
+    res.status(200).send(message);
   } catch(error){
-    res.status(401).send
+    res.status(200).send({
+      message: "Please log in to see my contact info! The authorization and authentication was built using Auth0.",
+    })
   }
  });
  
