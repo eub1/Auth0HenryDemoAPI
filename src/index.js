@@ -8,7 +8,6 @@ const helmet = require("helmet");
 const { clientOrigins, serverPort } = require("./config/env.dev");
 
 const { messagesRouter } = require("./messages/messages.router");
-const { recruiterRouter } = require("./recruiter/recruiter.router");
 
 /**
  * App Variables
@@ -28,7 +27,6 @@ app.use(express.json());
 app.use("/api", apiRouter);
 
 apiRouter.use("/messages", messagesRouter);
-apiRouter.use("/recruiter", recruiterRouter);
 
 app.use(function (err, req, res, next) {
   console.log(err);
